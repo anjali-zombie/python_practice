@@ -1,0 +1,1014 @@
+modules work like function.
+module are imported in python
+pip is used to install modulesthen it is imported in python program.
+->multiline comments in python done with triple single quote.
+->in python everything is object
+if variable a is string so to convert it in integer we write int(a).
+
+explicit typecasting :- same order of both data
+
+implicit typecasting :- one data type has higher ordering eg c=1.9 d=8 print(c+d) = 9.9 it converts lower ordering to higher ordering and returns the output
+/////////*********to check python version
+
+import sys
+print(sys.vesrsion)
+
+*************//////////////////
+*************python syntax*********
+
+if 5>2:
+   print("greater")
+above code will give error if u skip the indentation
+
+u must use same number spaces in same block o.w it will give indentation error
+
+**varaibles: x=5 , y="hello , world"
+x=str(3) #x will be '3' ->print(x)
+x=int(3) # x will be 3->print(type(x))
+= <class 'int'>
+x=float(3) # x will be 3.0
+
+->in python string variable can be declared either by using single or doublequotes.
+
+-> variables names are case-sensitive
+a=4
+A ="Sally"
+# A will not overwrite a
+
+Illegal variable names:
+2myvar = "John"
+my-var = "John"
+my var = "John" 
+
+Legal variable names:
+myvar = "John"
+my_var = "John"
+_my_var = "John"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John" 
+
+->Camel Case
+myVariableName = "John"
+
+->Pascal Case
+MyVariableName = "John" 
+
+->Snake Case
+my_variable_name = "John"
+
+x,y,z="orange","banana","cherry"
+
+x=y=z="orange"
+
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+print(x + y + z)
+-> output=> Python is awesome
+**comment: #this is a comment
+""" 
+this is 
+a multiline 
+comment
+"""
+*Python Data Types:-----
+Text Type: 	str
+Numeric Types: 	int, float, complex
+Sequence Types: 	list, tuple, range
+Mapping Type: 	dict
+Set Types: 	set, frozenset
+Boolean Type: 	bool
+Binary Types: 	bytes, bytearray, memoryview
+None Type: 	NoneType
+
+There are three numeric types in Python:
+
+int
+float
+complex
+
+#convert from int to float:
+a = float(x)
+
+#convert from float to int:
+b = int(y)
+
+#convert from int to complex:
+c = complex(x)
+
+import random
+print(random.randrange(1, 10)) 
+
+Integers:
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+
+->You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+Example
+print("It's alright")
+print("He is called 'Johnny'")
+print('He is called "Johnny"')
+
+You can assign a multiline string to a variable by using three quotes:
+
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a) 
+
+a = "Hello, World!"
+print(a[0])
+print(len(a))
+
+output=> H
+	13
+
+for x in "banana":
+  print(x) 
+
+output=>
+b
+a
+n
+a
+n
+a 
+
+txt = "The best things in life are free!"
+print("free" in txt)
+print("expensive" not in txt)
+
+
+output=True 
+	True
+->Slicing Strings
+Get the characters from position 2 to position 5 (not included):
+b = "Hello, World!"
+print(b[2:8])
+print(b[:5])
+From: "o" in "World!" (position -5)
+
+To, but not included: "d" in "World!" (position -2):
+print(b[-5:-2])
+ output=> llo, W
+=>	  llo
+=>	  orl
+
+x = dict(name="John", age=36)
+
+#display x:
+print(x)
+
+#display the data type of x:
+print(type(x)) 
+
+output=>{'name': 'John', 'age': 36}
+<class 'dict'> 
+
+*modifying string:->
+
+a = "Hello, World!"
+print(a.upper())
+print(a.lower())
+print(a.replace("H", "J"))
+
+output=>HELLO, WORLD! 
+hello, world! 
+Jello, World! 
+
+the strip() method removes any whitespace from the beginning or the end:
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!" 
+
+The split() method splits the string into substrings if it finds instances of the separator:
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!'] 
+		
+*concatanation:-
+
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+cc = a + " " + b
+print(cc)
+output=> HelloWorld 
+Hello World 
+
+To specify a string as an f-string, simply put an f in front of the string literal, and add curly brackets {} as placeholders for variables and other operations.
+Example
+
+Create an f-string:
+age = 36
+txt = f"My name is John, I am {age}"
+print(txt)
+txt1 = f"My name is John, I am {age:.2f}"
+print(txt1)
+txt2 =f"My name is John, I am {10+26}"
+
+output:-
+My name is John, I am 36 		
+My name is John, I am 36.00"
+My name is John, I am 36 
+
+The escape character allows you to use double quotes when you normally would not be allowed:
+txt = "We are the so-called \"Vikings\" from the north."
+
+output=>We are the so-called "Vikings" from the north. 
+
+txt = 'It\'s alright.'
+txt = "This will insert one \\ (backslash)."
+txt = "Hello\nWorld!"
+print(txt) 
+
+output=>It's alright. 
+->This will insert one \ (backslash). 
+->Hello
+World! 
+
+capitalize():	Converts the first character to upper. case eg:-x = txt.capitalize().The first character is converted to upper case, and the rest are converted to lower case
+casefold():	Converts string into lower case
+center():	Returns a centered string. x = txt.center(20):Print the word "banana", taking up the space of 20 characters, with "banana" in the middle.
+count():	Returns the number of times a specified value occurs in a string eg:-x = txt.count("apple")
+encode():	Returns an encoded version of the string
+endswith():	Returns true if the string ends with the specified value eg:-x = txt.endswith(".") returns true or false.
+expandtabs():	Sets the tab size of the string. eg:Set the tab size to 2 whitespaces:
+txt = "H\te\tl\tl\to"
+
+x =  txt.expandtabs(2)
+output:- H e l l o
+find():	Searches the string for a specified value and returns the position of where it was found. eg x = txt.find("welcome")
+format():	Formats specified values in a string. eg:txt = "For only {price:.2f} dollars!"
+print(txt.format(price = 49)) 
+txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36)
+format_map():	Formats specified values in a string
+index():	Searches the string for a specified value and returns the position of where it was found
+x = txt.index("welcome")
+isalnum():	Returns True if all characters in the string are alphanumeric
+isalpha():	Returns True if all characters in the string are in the alphabet
+isascii():	Returns True if all characters in the string are ascii characters
+isdecimal()"	Returns True if all characters in the string are decimals
+isdigit():	Returns True if all characters in the string are digits
+isidentifier():	Returns True if the string is an identifier
+islower():	Returns True if all characters in the string are lower case
+isnumeric():	Returns True if all characters in the string are numeric
+isprintable():	Returns True if all characters in the string are printable
+isspace():	Returns True if all characters in the string are whitespaces
+istitle(): 	Returns True if the string follows the rules of a title
+
+isupper():	Returns True if all characters in the string are upper case
+join():	Joins the elements of an iterable to the end of the string
+eg:myTuple = ("John", "Peter", "Vicky")
+
+x = "#".join(myTuple)
+
+print(x)
+output:-John#Peter#Vicky 
+ljust():	Returns a left justified version of the string
+lower():	Converts a string into lower case
+lstrip():	Returns a left trim version of the string
+maketrans(:)	Returns a translation table to be used in translations
+partition():	Returns a tuple where the string is parted into three parts
+txt = "I could eat bananas all day"
+
+x = txt.partition("bananas")
+output:-('I could eat ', 'bananas', ' all day') 
+replace():	Returns a string where a specified value is replaced with a specified value
+x = txt.replace("bananas", "apples")
+rfind():	Searches the string for a specified value and returns the last position of where it was found
+rindex():	Searches the string for a specified value and returns the last position of where it was found
+rjust():	Returns a right justified version of the string
+x = txt.rjust(20)
+rpartition():	Returns a tuple where the string is parted into three parts
+rsplit():	Splits the string at the specified separator, and returns a list
+Split a string into a list, using comma, followed by a space (, ) as the separator:
+txt = "apple, banana, cherry"
+
+x = txt.rsplit(", ")
+output:-['apple', 'banana', 'cherry'] 
+rstrip():	Returns a right trim version of the string
+split():	Splits the string at the specified separator, and returns a list
+splitlines():	Splits the string at line breaks and returns a list
+txt = "Thank you for the music\nWelcome to the jungle"
+
+x = txt.splitlines()
+output:-['Thank you for the music', 'Welcome to the jungle'] 
+startswith():	Returns true if the string starts with the specified value
+x = txt.startswith("Hello")
+strip():	Returns a trimmed version of the string
+Remove spaces at the beginning and at the end of the string:
+txt = ",,,,,rrttgg.....banana....rrr"
+
+x = txt.strip(",.grt")
+
+print(x)
+output:-banana 
+swapcase():	Swaps cases, lower case becomes upper case and vice versa
+title():	Converts the first character of each word to upper case
+translate():	Returns a translated string
+upper():	Converts a string into upper case
+zfill():	Fills the string with a specified number of 0 values at the 
+txt = "50"
+
+x = txt.zfill(10)
+
+print(x)
+output:0000000050 
+
+boolean:
+Almost any value is evaluated to True if it has some sort of content.
+
+Any string is True, except empty strings.
+
+Any number is True, except 0.
+
+Any list, tuple, set, and dictionary are True, except empty ones.
+bool(False)
+bool(None)
+bool(0)
+bool("")
+bool(())
+bool([])
+bool({}) 
+
+output: all returns false
+
+logical operators:
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+z = x
+
+print(x is z)
+
+# returns True because z is the same object as x
+
+print(x is y)
+
+# returns False because x is not the same object as y, even if they have the same content
+
+print(x == y)
+
+# to demonstrate the difference betweeen "is" and "==": this comparison returns True because x is equal to y
+
+x = ["apple", "banana"]
+
+print("banana" in x)
+
+# returns True because a sequence with the value "banana" is in the list
+
+*List:--------------------------------
+mylist = ["apple", "banana", "cherry"]
+
+he list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+print(len(thislist))
+output:returns length of list
+A list can contain different data typesList is a collection which is ordered and changeable. Allows duplicate members.
+hange the values "banana" and "cherry" with the values "blackcurrant" and "watermelon":
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]
+print(thislist)
+Change the second value by replacing it with two new values:
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist) 
+output:['apple', 'blackcurrant', 'watermelon', 'cherry']
+
+list insertion:
+thislist.insert(2, "watermelon")
+
+To append elements from another list to the current list, use the extend() method.
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+
+The remove() method removes the specified item.
+thislist.remove("banana")
+The pop() method removes the specified index.
+thislist.pop(1)
+The del keyword also removes the specified index:
+del thislist[0]
+The clear() method empties the list.
+
+loop in list:-
+thislist = ["apple", "banana", "cherry"]
+for x in thislist:
+  print(x)
+#Print all items in the list, one by one
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+  print(thislist[i]) 
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+  if "a" in x:
+    newlist.append(x)
+
+print(newlist) 
+#Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+
+sort list:-
+thislist.sort()
+
+Sort the list descending:
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(reverse = True)
+print(thislist)
+output:-[100, 82, 65, 50, 23] 
+
+list copy:
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+
+list joining:
+list3 = list1 + list2
+
+list functions:-
+
+fruits = ['apple', 'banana', 'cherry']
+
+x = fruits.index("cherry") 
+
+output:-2 
+
+fruits = ['apple', 'banana', 'cherry']
+
+fruits.insert(1, "orange")
+
+fruits = ['apple', 'banana', 'cherry']
+
+fruits.reverse()
+
+print(fruits)
+output: ['cherry', 'banana', 'apple'] 
+
+
+Method 	Description
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
+
+tuples in list:
+A tuple is a collection which is ordered and unchangeable.
+Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+
+Tuples allow duplicate values:
+A tuple with strings, integers and boolean values:
+tuple1 = ("abc", 34, True, 40, "male")
+
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+
+to change tuple values:
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+Create a new tuple with the value "orange", and add that tuple:
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+
+print(thistuple)
+
+Unpacking a tuple:
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+output:
+apple
+banana
+cherry
+
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+output:apple
+banana
+['cherry', 'strawberry', 'raspberry']
+Get your own Python Server
+
+Join two tuples:
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3) 
+
+output:('a', 'b', 'c', 1, 2, 3) 
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+output:('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')
+
+tuple functions:
+count()	Returns the number of times a specified value occurs in a tuple.
+eg: tuple.count(number)
+index()	Searches the tuple for a specified value and returns the position of where it was found
+
+set in python:
+
+A set is a collection which is unordered, unchangeable*, and unindexed.
+
+thisset = {"apple", "banana", "cherry"}
+
+thisset item can appear in any order after printing
+
+True and 1 is considered the same value:
+thisset = {"apple", "banana", "cherry", True, 1, 2}
+
+print(thisset)
+
+output:-{True, 2, 'banana', 'cherry', 'apple'} 
+
+It is also possible to use the set() constructor to make a set.
+
+to access all elements of set :
+thisset = {"apple", "banana", "cherry"}
+
+for x in thisset:
+  print(x) 
+
+can not change set items but can add new items
+
+eg:-thisset.add("orange")
+Add elements from tropical into thisset:
+thisset.update(tropical)
+
+
+The object in the update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+
+thisset.remove("banana")
+
+thisset.pop():- will remove random item by using pop
+
+thisset.clear()
+
+The del keyword will delete the set completely:
+
+del thisset
+
+set join:
+set3 = set1.union(set2)
+set3 = set1 | set2
+
+set3 = set1.intersection(set2)
+
+python dictionaries:
+A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+to print brand value :
+thisdict["brand"]
+
+if dictionary is ordered then we can access dictionary vale with index o.w if its unordered then we cant access with index
+
+if there is duplicate value in dictionary it will overwrite it.
+print(len(thisdict)) 
+
+The values in dictionary items can be of any data type:
+Example
+
+String, int, boolean, and list data types:
+thisdict =	{
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+} 
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+
+Get a list of the keys:
+x = thisdict.keys() 
+x = thisdict.values() 
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+car["year"] = 2020
+
+adding new item in dictionary:
+car["color"] = "white"
+
+Get a list of the key:value pairs
+x = thisdict.items() 
+
+The pop() method removes the item with the specified key name:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+ The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+thisdict.popitem()
+
+del thisdict(this will delete whole dictionary)
+
+thisdict.clear()(empty dictionary)
+
+loop in dictionnary:
+thisdict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict:
+  print(x)
+output:
+brand
+model
+year 
+  print(thisdict[x]) 
+output:
+Ford
+Mustang
+1964 
+
+for x, y in thisdict.items():
+  print(x, y)
+output:
+brand Ford
+model Mustang
+year 1964 
+
+copy in dictionary:
+mydict = thisdict.copy()
+
+dictionary functions:
+Method 	Description
+clear()	Removes all the elements from the dictionary
+copy()	Returns a copy of the dictionary
+fromkeys()	Returns a dictionary with the specified keys and value
+get()	Returns the value of the specified key eg:-x = car.get("model")
+items()	Returns a list containing a tuple for each key value pair eg:-x = car.items()
+keys()	Returns a list containing the dictionary's keys eg:x = car.keys()
+pop()	Removes the element with the specified key eg:car.pop("model")
+
+popitem()	Removes the last inserted key-value pair
+setdefault()	Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+update()	Updates the dictionary with the specified key-value pairs
+eg:-car.update({"color": "White"})
+
+values()	Returns a list of all the values in the dictionary
+eg:-x = car.values()
+
+if else in python:
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+while in python:
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+
+for in python:
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    break
+  print(x)
+
+for x in range(2, 6):
+  print(x) 
+output:
+2
+3
+4
+5 
+
+for x in range(2, 30, 3):
+  print(x) 
+output:
+2
+5
+8
+11
+14
+17
+20
+23
+26
+29 
+
+for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.
+
+python function
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+
+docstrings:
+
+defined just below the function they can be printed by following rule
+print(functionname.__doc__)
+
+in python we can also raise error by ourselves by writing raise ValueError("")it is  called custom errors
+
+to access index and value of list at same time using for loop is call enumeration in python
+
+for index, values in list :
+	print(values)
+	if(index == 3)
+		print("very good")
+ 
+
+    print(f"{question[0]}")
+
+python virtual environment:
+
+pip freeze: list all packages installed under virtual env
+
+to put all packages present in venv in text file "req" write command : pip freeze > req.txt
+
+pip install -r req.txt: this command will install all packages present in req.txt file
+
+to install python virtual environment:
+
+sudo apt install python3-venv
+
+to create virtual environment: sudo python3 -m venv myenv
+
+to activate virtual environment :  source myenv/bin/activate
+
+to deactivate : deactivate
+
+import:
+
+print(dir(math)): will print all functions present in math package
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+The if __name__ == "__main__" idiom is a common pattern used in Python scripts to determine whether the script is being run directly or being imported as a module into another script.
+
+In Python, the __name__ variable is a built-in variable that is automatically set to the name of the current module. When a Python script is run directly, the __name__ variable is set to the string __main__ When the script is imported as a module into another script, the __name__ variable is set to the name of the module.
+
+Here's an example of how the if __name__ == __main__ idiom can be used:
+
+def main():
+    # Code to be run when the script is run directly
+    print("Running script directly")
+
+if __name__ == "__main__":
+    main()
+
+In this example, the main function contains the code that should be run when the script is run directly. The if statement at the bottom checks whether the __name__ variable is equal to __main__. If it is, the main function is called.
+
+os Module in Python
+The os module in Python is a built-in library that provides functions for interacting with the operating system. It allows you to perform a wide variety of tasks, such as reading and writing files, interacting with the file system, and running system commands.
+
+Here are some common tasks you can perform with the os module:
+
+Reading and writing files The os module provides functions for opening, reading, and writing files. For example, to open a file for reading, you can use the open function:
+
+import os
+# Open the file in read-only mode
+f = os.open("myfile.txt", os.O_RDONLY)
+# Read the contents of the file
+contents = os.read(f, 1024)
+# Close the file
+os.close(f)
+
+To open a file for writing, you can use the os.O_WRONLY flag:
+
+import os
+# Open the file in write-only mode
+f = os.open("myfile.txt", os.O_WRONLY)
+# Write to the file
+os.write(f, b"Hello, world!")
+# Close the file
+os.close(f)
+
+Interacting with the file system
+The os module also provides functions for interacting with the file system. For example, you can use the os.listdir function to get a list of the files in a directory:
+
+import os
+# Get a list of the files in the current directory
+files = os.listdir(".")
+print(files)  # Output: ['myfile.txt', 'otherfile.txt']
+
+You can also use the os.mkdir function to create a new directory:
+
+import os
+# Create a new directory
+os.mkdir("newdir")
+
+Running system commands
+Finally, the os module provides functions for running system commands. For example, you can use the os.system function to run a command and get the output:
+
+import os
+# Run the "ls" command and print the output
+output = os.system("ls")
+print(output)  # Output: ['myfile.txt', 'otherfile.txt']
+
+diffrence between "is" and "=="
+
+->"is" compare one variable with exact location of another variable
+-> "==" compare the values of two varibles
+
+eg:
+a=[1,2,3]
+b=[1,2,3]
+
+print( a is b)=> false because list is mutable so both a and b will have diffrent location in memmory
+
+print(a==b)=> true
+
+if :
+
+a=3
+b=3
+
+print(a is b)=> true because 3 is constant data type and so it is immutable so a and b both will point to same memory location same goes for tuple as well as strings because these are also immutable
+
+print(a==b)=> true
+
+file I/O in python:-------------------------------------------------------------------------------------------------------------------------------------
+
+Reading from a File
+
+Once we have a file object, we can use various methods to read from the file.
+
+The read() method reads the entire contents of the file and returns it as a string.
+
+f = open('myfile.txt', 'r')
+contents = f.read()
+print(contents)
+
+Writing to the file
+
+f = open('myfile.txt', 'w')
+f.write('Hello, world!')
+
+Keep in mind that writing to a file will overwrite its contents. If you want to append to a file instead of overwriting it, you can open it in append mode.
+
+f = open('myfile.txt', 'a')
+f.write('Hello, world!')
+
+f.close()
+
+The readline() method reads a single line from the file. If we want to read multiple lines, we can use a loop.
+
+f = open('myfile.txt', 'r')
+while True:
+    line = f.readline()
+    if not line:
+        break
+    print(line)
+
+The writelines() method in Python writes a sequence of strings to a file. The sequence can be any iterable object, such as a list or a tuple.
+
+Here's an example of how to use the writelines() method:
+
+f = open('myfile.txt', 'w')
+lines = ['line 1\n', 'line 2\n', 'line 3\n']
+f.writelines(lines)
+f.close()
+
+This will write the strings in the lines list to the file myfile.txt. The \n characters are used to add newline characters to the end of each string.
+
+f = open('myfile.txt', 'w')
+lines = ['line 1', 'line 2', 'line 3']
+for line in lines:
+    f.write(line + '\n')
+f.close()
+
+The seek() function allows you to move the current position within a file to a specific point. The position is specified in bytes, and you can move either forward or backward from the current position. For example:
+
+with open('file.txt', 'r') as f:
+  # Move to the 10th byte in the file
+  f.seek(10)
+
+  # Read the next 5 bytes
+  data = f.read(5)
+
+tell() function
+
+The tell() function returns the current position within the file, in bytes. This can be useful for keeping track of your location within the file or for seeking to a specific position relative to the current position. For example:
+
+with open('file.txt', 'r') as f:
+  # Read the first 10 bytes
+  data = f.read(10)
+
+  # Save the current position
+  current_position = f.tell()
+
+  # Seek to the saved position
+  f.seek(current_position)
+
+if you want to truncate the file to a specific size, you can use the truncate function.
+
+Here is an example of how to use the truncate function:
+
+with open('sample.txt', 'w') as f:
+  f.write('Hello World!')
+  f.truncate(5)
+
+with open('sample.txt', 'r') as f:
+  print(f.read())
+
+lambda function:---------------------------------
+In Python, a lambda function is a small anonymous function without a name. It is defined using the lambda keyword and has the following syntax:
+
+lambda arguments: expression
+
+Lambda functions are often used in situations where a small function is required for a short period of time. They are commonly used as arguments to higher-order functions, such as map, filter, and reduce.
+
+def appl(fx, value):
+  return 6 + fx(value)
+
+double = lambda x: x * 2
+cube = lambda x: x * x * x
+avg = lambda x, y, z: (x + y + z) / 3
+
+print(double(5))=> output=> 10
+print(cube(5))=> 125
+print(avg(3, 5, 10))=>
+print(appl(lambda x: x * x , 2))
+
+map , filter and reduce function in python:----------------------------------------------------------------------------------------------------------------
+
+# # MAP 
+# # def cube(x):
+# #   return x * x * x
+
+
+# # print(cube(2))
+
+# l = [1, 2, 4, 6, 4, 3]
+# # newl = []
+# # for item in l:
+# #   newl.append(cube(item))
+
+# newl = list(map(lambda x: x*x*x, l))
+# print(newl)
+
+# # FILTER
+# def filter_function(a):
+#   return a>2
+  
+# newnewl = list(filter(filter_function, l))
+# print(newnewl)
+
+from functools import reduce
+
+# List of numbers
+numbers = [1, 2, 3, 4, 5] 
+
+# Calculate the sum of the numbers using the reduce function
+def mysum(x, y):
+  return x + y
+  
+sum = reduce(mysum, numbers)
+
+# Print the sum
+print(sum)
